@@ -32,13 +32,11 @@
       dest: /var/www/html/
       force: yes
 
-#   - name: recursively change ownership of a directory
-#     file:
-#       path: /var/www/html
-#       state: directory
-#       recurse: yes
-#       owner: apache
-#       group: apache
+  - name: recursively change ownership of a directory
+    file:
+      path: /var/www/html
+      state: directory
+      recurse: yes
+      owner: apache
+      group: apache
 
-  - name: safety.directory error
-    shell: "git config --global --add safe.directory /var/www/html"
