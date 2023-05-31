@@ -37,5 +37,5 @@
 #       owner: apache
 #       group: apache
 
-    - name: safety.directory error
-      shell: "git config --global --add safe.directory /var/www/html"
+  - name: safety.directory error
+    shell: "git config --global --add safe.directory /var/www/html"
