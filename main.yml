@@ -21,7 +21,10 @@
       name: httpd
       state: started
       enabled: yes
-
+  
+  - name: safety.directory error
+    shell: "git config --global --add safe.directory /var/www/html"
+    
   - name: pull melodi
     git:
       repo: "{{ melodi_repo }}"
